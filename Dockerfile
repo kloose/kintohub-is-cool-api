@@ -11,7 +11,7 @@ RUN ./mvnw clean package
 
 RUN rm -rf /app ~/.mvn
 
-COPY target/kintohub-is-cool-api-*.jar kintohub-is-cool-api.jar
+COPY target/kintohub-is-cool-api-0.1.jar kintohub-is-cool-api.jar
 EXPOSE 8080
 
 CMD ["java", "-Dcom.sun.management.jmxremote", "-Xmx128m", "-XX:+IdleTuningGcOnIdle", "-Xtune:virtualized", "-jar", "kintohub-is-cool-api.jar"]
